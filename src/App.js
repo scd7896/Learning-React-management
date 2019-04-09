@@ -51,7 +51,6 @@ class App extends Component {
     const {classes} = this.props;
     return (
       <Paper className = {classes.root}>
-        
           <Table className = {classes.table}>
               <TableHead>
                 <TableRow>
