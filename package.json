@@ -1,9 +1,17 @@
 {
+<<<<<<< HEAD
   "name": "usermange",
+=======
+  "name": "study",
+>>>>>>> RE Working
   "version": "0.1.0",
   "private": true,
   "dependencies": {
     "react": "^16.8.6",
+<<<<<<< HEAD
+=======
+    "react-addons-css-transition-group": "^15.6.2",
+>>>>>>> RE Working
     "react-dom": "^16.8.6",
     "react-scripts": "2.1.8"
   },
