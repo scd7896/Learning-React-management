@@ -60,6 +60,7 @@ class App extends Component {
                   <TableCell>나이</TableCell>
                   <TableCell>성별</TableCell>
                   <TableCell>직업</TableCell>
+                  <TableCell>아아아아아아아</TableCell>
                 </TableRow>
               </TableHead>
               <TableBody>
@@ -79,7 +80,9 @@ class App extends Component {
                 }
             </TableBody>
           </Table>
-        
+       <div>
+         아아아아아아 개같은게임
+         </div> 
       </Paper>
     )
    }
