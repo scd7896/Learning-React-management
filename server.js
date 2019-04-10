@@ -29,6 +29,13 @@ app.get('/api/customers', (req,res)=>{
             'age' : '30',
             'sex' :  '여자',
             'job' : '사무직'
+          },{
+            'id' : 4,
+            'image': 'https://placeimg.com/64/64/4',
+            'name': '한놈추가',
+            'age' : '29',
+            'sex' :  '남자',
+            'job' : '테스트'
           }
     ]);
 });
