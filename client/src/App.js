@@ -1,30 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
+import CustomerAdd from './components/CustomerAdd';
 import Customer from './components/Customer';
-import Paper from '@material-ui/core/Paper'
-import Table from '@material-ui/core/Table';
-import TableHead from '@material-ui/core/TableHead';
-import TableBody from '@material-ui/core/TableBody';
-import TableRow from '@material-ui/core/TableRow';
-import TableCell from '@material-ui/core/TableCell';
-import {withStyles} from '@material-ui/core/styles';
-import CircularProgress from '@material-ui/core/CircularProgress'
-
-const styles = theme =>({
-  root : {
-    width : '100%',
-    marginTop : theme.spacing.unit*3,
-    overflowX: "auto"
-  },
-  table : {
-    minWidth : 1080
-  },
-  progress :{
-    margin : theme.spacing.unit *2
-  }
-});
-
-
 
 class App extends Component {
   state ={
@@ -48,40 +25,34 @@ class App extends Component {
     this.setState({ completed: completed >= 100 ? 0: completed+1})
   }
   render() {
-    const {classes} = this.props;
+    
     return (
-      <Paper className = {classes.root}>
-          <Table className = {classes.table}>
-              <TableHead>
-                <TableRow>
-                  <TableCell>번호</TableCell>
-                  <TableCell>이미지</TableCell>
-                  <TableCell>이름</TableCell>
-                  <TableCell>나이</TableCell>
-                  <TableCell>성별</TableCell>
-                  <TableCell>직업</TableCell>
-                </TableRow>
-              </TableHead>
-              <TableBody>
-                 { this.state.customers? this.state.customers.map(c => {
-                    return ( <Customer key = {c.id}     id = {c.id}  image ={c.image}
-                      name ={c.NAME} sex = {c.gender}  age = {c.birthday}  job = {c.job} />)
-                  }) : 
-                  <TableRow>
-                    <TableCell colspan = "6" align = "center">
-                      <CircularProgress className ={classes.propgress} 
-                        variant = "determinate" value = {this.state.completed}></CircularProgress>
-                    </TableCell>
-                    </TableRow>
-                  }
-            </TableBody>
-          </Table>
-       <div>
-         제발좀 되라
-         </div> 
-      </Paper>
+      <div>
+        <div >
+            <table>
+                <thead>
+                  <tr>
+                    <th>번호</th>
+                    <th>이미지</th>
+                    <th>이름</th>
+                    <th>나이</th>
+                    <th>성별</th>
+                    <th>직업</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  { this.state.customers? this.state.customers.map(c => {
+                      return ( <Customer key = {c.id}     id = {c.id}  image ={c.image}
+                        name ={c.NAME} sex = {c.gender}  age = {c.birthday}  job = {c.job} />)
+                    }) : "로딩 중"}
+              </tbody>
+            </table>
+        </div>
+        <CustomerAdd></CustomerAdd>
+      </div>
+      
     )
    }
 }
 
-export default withStyles(styles)(App);
+export default App;
