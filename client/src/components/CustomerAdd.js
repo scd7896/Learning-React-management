@@ -20,6 +20,15 @@ class CustomerAdd extends React.Component{
             .then((res)=>{
                 console.log(res.data);
             })
+            this.setState({
+                file: null,
+                userName :'',
+                birthday :'',
+                gender : '',
+                job : '',
+                fileName : '',
+            })
+            window.location.reload();
     }
     handleFileChange = (e)=>{
         this.setState ({
@@ -33,11 +42,11 @@ class CustomerAdd extends React.Component{
         this.setState(nextState);
     }
     addCustomer = () =>{
-        const url = '.api/customers';
+        const url = 'api/customers';
         const formData = new FormData();
         formData.append('image', this.state.file);
         formData.append('name', this.state.userName);
-        formData.append('age', this.state.birthday);
+        formData.append('birthday', this.state.birthday);
         formData.append('gender', this.state.gender);
         formData.append('job', this.state.job);
         const config = {

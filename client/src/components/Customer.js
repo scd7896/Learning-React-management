@@ -8,9 +8,9 @@ class Customer extends React.Component{
            <td> {this.props.id}</td>
            <td> <img src = {this.props.image} alt = "props img"></img></td>
            <td> {this.props.name}</td>
-           <td> {this.props.age}</td>
+           <td> {this.props.birthday}</td>
            <td> {this.props.job}</td>
-           <td> {this.props.sex}</td>
+           <td> {this.props.gender}</td>
            
         </tr>
        )

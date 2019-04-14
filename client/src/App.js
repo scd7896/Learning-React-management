@@ -43,7 +43,7 @@ class App extends Component {
                 <tbody>
                   { this.state.customers? this.state.customers.map(c => {
                       return ( <Customer key = {c.id}     id = {c.id}  image ={c.image}
-                        name ={c.NAME} sex = {c.gender}  age = {c.birthday}  job = {c.job} />)
+                        name ={c.NAME} gender = {c.gender}  birthday = {c.birthday}  job = {c.job} />)
                     }) : "로딩 중"}
               </tbody>
             </table>
