@@ -3,7 +3,18 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const app = express();
 const port = process.env.PORT || 5000;
-
+// const oracle = require('oracledb');
+// const orData = fs.readFileSync('./ordatabse.json');
+// const orConf = JSON.parse(orData);
+// const orConnection = oracle.createConnection({
+//   host : orConf.host,
+//   user : orConf.user,
+//   password : orConf.password,
+//   port : orConf.port,
+//   sid : 'orcl',
+//   database : orConf.database
+// })
+// orConnection.connect();
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 
