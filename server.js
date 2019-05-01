@@ -3,18 +3,8 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const app = express();
 const port = process.env.PORT || 5000;
-// const oracle = require('oracledb');
-// const orData = fs.readFileSync('./ordatabse.json');
-// const orConf = JSON.parse(orData);
-// const orConnection = oracle.createConnection({
-//   host : orConf.host,
-//   user : orConf.user,
-//   password : orConf.password,
-//   port : orConf.port,
-//   sid : 'orcl',
-//   database : orConf.database
-// })
-// orConnection.connect();
+
+
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 
@@ -56,12 +46,8 @@ app.post('/api/customers', upload.single('image'), (req,res)=>{
   
   connection.query(sql,params,
     (err,rows,fileds) =>{
-      res.send(rows);
-      
+      res.send(rows);  
     }
   );
 })
 app.listen(port, ()=>console.log(`동작중인 포트 ${port}`));
-
-
-
