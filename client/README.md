@@ -13,7 +13,7 @@
       .then(res => this.setState({customers : res}))
       .catch(err => console.log(err));
   }
-
+eee
 >>componentDidMount() 는 render가 끝나고 나서 발동되는 함수로 주로 외부의 api를 불러오는 용도로 사용한다. 
 >>this.timer 로 20초주기로 progress를 구현해서 로딩바를 구현할 생각이었으나 material을 찾지못해 문제가 생겨서 다음에 하는걸로한다.
 >>callapi()의 함수를 호출하는데 비동기 함수이므로 성공했을 경우의 then과 실패의 경우인 catch로 나누어서 예약을 걸어둔다. 성공햇을 경우 받아온 데이터를 res라는 이름으로 받아서 customers에 넣는다.
