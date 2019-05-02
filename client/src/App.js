@@ -49,11 +49,12 @@ class App extends Component {
                     <th>나이</th>
                     <th>성별</th>
                     <th>직업</th>
+                    <th>설정</th>
                   </tr>
                 </thead>
                 <tbody>
                   { this.state.customers? this.state.customers.map(c => {
-                      return ( <Customer key = {c.id}     id = {c.id}  image ={c.image}
+                      return ( <Customer stateRefresh = {this.stateRefresh} key = {c.id}     id = {c.id}  image ={c.image}
                         name ={c.NAME} gender = {c.gender}  birthday = {c.birthday}  job = {c.job} />)
                     }) : "로딩 중"}
               </tbody>

@@ -1,4 +1,5 @@
 import React from 'react';
+import CustomerDelete from './CustomerDelete';
 
 
 class Customer extends React.Component{
@@ -11,7 +12,7 @@ class Customer extends React.Component{
            <td> {this.props.birthday}</td>
            <td> {this.props.job}</td>
            <td> {this.props.gender}</td>
-           
+           <td> <CustomerDelete stateRefresh = {this.props.stateRefresh} id= {this.props.id}></CustomerDelete></td>
         </tr>
        )
     }
